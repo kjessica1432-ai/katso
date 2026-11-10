@@ -1,0 +1,1769 @@
+
+/* =====================================================
+   JESS-MEDIA (PTY) LTD
+   MASTER WEBSITE STYLESHEET
+   Pages: Home, About, Services, Clients,
+          Portfolio and Contact
+===================================================== */
+
+
+/* =====================================================
+   1. GENERAL WEBSITE STYLING
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F4F6F8;
+    color: #18202B;
+    line-height: 1.5;
+}
+
+a {
+    transition: 0.3s ease;
+}
+
+
+/* =====================================================
+   2. WEBSITE COLOUR AND TYPOGRAPHY
+===================================================== */
+
+:root {
+    --black: #090B0D;
+    --dark: #151719;
+    --dark-grey: #292C2F;
+    --yellow: #FFE600;
+    --pink: #F12678;
+    --white: #FFFFFF;
+    --light-grey: #F4F6F8;
+    --text-grey: #526071;
+    --border-grey: #303236;
+}
+
+
+/* COMMON SECTION HEADINGS */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h4 {
+    color: var(--pink);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    color: #18202B;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   3. HEADER AND LOGO
+===================================================== */
+
+header,
+.header {
+    width: 100%;
+    min-height: 145px;
+    background-color: var(--black);
+    padding: 20px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 5px solid var(--border-grey);
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-circle {
+    width: 74px;
+    height: 74px;
+    border: 2px solid var(--pink);
+    border-radius: 50%;
+    background-color: #1A1A1A;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.logo-circle span:first-child,
+.logo-j,
+.pink {
+    color: var(--white);
+}
+
+.logo-circle span:last-child,
+.logo-m {
+    color: var(--yellow);
+}
+
+.logo-j,
+.logo-m {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.logo-j {
+    margin-right: -5px;
+}
+
+.logo-text h2 {
+    color: var(--yellow);
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.logo-text p {
+    color: var(--white);
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+
+/* ALTERNATIVE TEXT LOGO */
+
+.logo:not(:has(.logo-circle)) {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--yellow);
+}
+
+.logo span {
+    color: var(--pink);
+}
+
+
+/* =====================================================
+   4. NAVIGATION BAR
+===================================================== */
+
+nav,
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a,
+.navbar a {
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 0;
+    transition: 0.3s;
+}
+
+nav a:hover,
+.navbar a:hover {
+    color: var(--pink);
+}
+
+nav .active,
+.navbar a.active,
+nav a.active {
+    color: var(--pink);
+    font-weight: bold;
+    border-bottom: 4px solid var(--yellow);
+}
+
+
+/* =====================================================
+   5. COMMON HERO SECTIONS
+===================================================== */
+
+.hero,
+.about-hero,
+.portfolio-hero {
+    width: 100%;
+
+    background: linear-gradient(
+        120deg,
+        #080A0C,
+        #3C3F40,
+        #080A0C
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 40px 5%;
+    gap: 30px;
+}
+
+.hero {
+    min-height: 300px;
+}
+
+.about-hero {
+    min-height: 390px;
+    padding: 55px;
+}
+
+.portfolio-hero {
+    min-height: 230px;
+    padding: 40px 55px;
+}
+
+
+/* COMMON HERO CONTENT */
+
+.hero-content {
+    width: 55%;
+}
+
+.hero-content h4 {
+    color: var(--yellow);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 span {
+    color: var(--pink);
+}
+
+.hero-content h2 {
+    color: var(--pink);
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    color: #E8E9EA;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-top: 15px;
+    max-width: 650px;
+}
+
+.hero-content .second-text {
+    color: #D1D5D9;
+    font-size: 15px;
+    margin-top: 12px;
+}
+
+
+/* HOME PAGE HERO */
+
+.hero-tagline {
+    color: var(--yellow);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+
+/* =====================================================
+   6. HOME PAGE DESIGN GRAPHIC
+===================================================== */
+
+.hero-image {
+    width: 330px;
+    height: 300px;
+    background-color: #1A1D20;
+    border: 2px solid #4A4D50;
+    border-radius: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.design-box {
+    width: 230px;
+    height: 230px;
+    background-color: #F0F1F1;
+    border-radius: 12px;
+    padding: 28px 26px;
+
+    display: flex;
+    gap: 14px;
+}
+
+.pink-box {
+    width: 85px;
+    height: 155px;
+    background-color: var(--pink);
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pink-box span {
+    color: var(--white);
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.right-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.yellow-box {
+    width: 82px;
+    height: 72px;
+    background-color: var(--yellow);
+    border-radius: 5px;
+
+    font-size: 38px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black-box {
+    width: 82px;
+    height: 68px;
+    background-color: #17191B;
+    border-radius: 5px;
+    color: var(--white);
+
+    font-size: 12px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =====================================================
+   7. HOME PAGE SERVICES
+===================================================== */
+
+.services {
+    min-height: 250px;
+    background-color: var(--light-grey);
+    padding: 50px 5%;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.service-container .service-card {
+    width: 33.33%;
+    min-height: 85px;
+    background-color: var(--white);
+    border: 2px solid #E1E5E9;
+    border-radius: 12px;
+
+    display: flex;
+    overflow: hidden;
+}
+
+.pink-line,
+.yellow-line {
+    width: 8px;
+    min-width: 8px;
+}
+
+.pink-line {
+    background-color: var(--pink);
+}
+
+.yellow-line {
+    background-color: var(--yellow);
+}
+
+.service-content {
+    padding: 18px 16px;
+}
+
+.service-content h3 {
+    color: #18202B;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    color: var(--text-grey);
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   8. HOME PAGE ABOUT SECTION
+===================================================== */
+
+.about-section {
+    min-height: 330px;
+    background-color: var(--dark);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 55px 5%;
+    gap: 35px;
+}
+
+.about-content {
+    width: 55%;
+}
+
+.about-content h4 {
+    color: var(--yellow);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.about-content h2 {
+    color: var(--white);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #D5D8DC;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 520px;
+    margin-bottom: 25px;
+}
+
+.about-button {
+    display: inline-block;
+    background-color: var(--pink);
+    color: var(--white);
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.about-button:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.about-image {
+    width: 300px;
+    height: 210px;
+    border-radius: 14px;
+
+    background: linear-gradient(
+        to bottom,
+        #A7A9A6,
+        #252729
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-image h3 {
+    color: var(--black);
+    font-size: 16px;
+}
+
+.about-image h2 {
+    color: var(--yellow);
+    font-size: 32px;
+}
+
+
+/* =====================================================
+   9. ABOUT PAGE - MISSION AND VISION
+===================================================== */
+
+.mission-vision {
+    min-height: 255px;
+    background-color: var(--light-grey);
+
+    display: flex;
+    align-items: center;
+
+    padding: 40px 5%;
+    gap: 30px;
+}
+
+.mission,
+.vision {
+    width: 50%;
+}
+
+.mission h4,
+.vision h4 {
+    color: var(--pink);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.mission h2,
+.vision h2 {
+    color: #18202B;
+    font-size: 27px;
+    margin-bottom: 18px;
+}
+
+.mission p,
+.vision p {
+    color: var(--text-grey);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 155px;
+    background-color: #D4D9DF;
+    margin: 0 30px;
+}
+
+
+/* =====================================================
+   10. ABOUT PAGE - OUR VALUES
+===================================================== */
+
+.values {
+    min-height: 330px;
+    background-color: #17191B;
+    padding: 55px 5%;
+    text-align: center;
+}
+
+.values > h3 {
+    color: var(--yellow);
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.value-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.value-card {
+    width: 25%;
+    min-height: 115px;
+    background-color: #292C2F;
+    border: 2px solid #45494C;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.number {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pink-bg {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+.yellow-bg {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.value-card h4 {
+    color: var(--white);
+    font-size: 13px;
+}
+
+.slogan {
+    color: var(--pink);
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+
+/* =====================================================
+   11. CLIENTS PAGE
+===================================================== */
+
+.client-section {
+    background-color: var(--light-grey);
+    padding: 40px 4%;
+}
+
+.client-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.client-card {
+    min-height: 155px;
+    background-color: var(--white);
+    border: 2px solid #E4E8EC;
+    border-radius: 11px;
+    padding: 20px 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.client-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 18px rgba(0,0,0,0.10);
+}
+
+.client-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.yellow {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.pink {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+.black {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.client-card h3 {
+    color: #18202B;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.client-card p {
+    color: var(--text-grey);
+    font-size: 12px;
+}
+
+
+/* CLIENT HERO PARTNERSHIP GRAPHIC */
+
+.partnership-card {
+    width: 270px;
+    height: 150px;
+    position: relative;
+
+    background-color: #252729;
+    border: 2px solid #696B6D;
+    border-radius: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.graphic-yellow,
+.graphic-pink {
+    position: absolute;
+    width: 85px;
+    height: 28px;
+    top: 52px;
+    border-radius: 15px;
+}
+
+.graphic-yellow {
+    left: 25px;
+    background-color: var(--yellow);
+}
+
+.graphic-pink {
+    right: 25px;
+    background-color: var(--pink);
+}
+
+.graphic-center {
+    position: absolute;
+    z-index: 2;
+    width: 52px;
+    height: 46px;
+    background-color: #E8B58F;
+    border-radius: 15px;
+}
+
+.partnership-card h5 {
+    position: absolute;
+    bottom: 18px;
+    color: var(--white);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+
+/* CLIENTS DIFFERENCE SECTION */
+
+.difference-section {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 45px 5%;
+
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    gap: 35px;
+}
+
+.difference-content h4 {
+    color: var(--yellow);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.difference-content h2 {
+    color: var(--white);
+    font-size: 25px;
+    margin-bottom: 16px;
+}
+
+.difference-content p {
+    color: #D6D9DD;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* CLIENT BENEFITS */
+
+.benefits-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.benefit-card {
+    min-height: 65px;
+    background-color: #282B2E;
+    border: 2px solid #44484B;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 12px;
+    gap: 12px;
+}
+
+.benefit-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.benefit-card h3 {
+    color: var(--white);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   12. SERVICES PAGE
+===================================================== */
+
+.services-intro {
+    text-align: center;
+    padding: 65px 10%;
+
+    background: linear-gradient(
+        135deg,
+        #242424,
+        #080808
+    );
+}
+
+.services-intro h1 {
+    font-size: 36px;
+    color: var(--yellow);
+    margin-bottom: 20px;
+}
+
+.services-intro h1 span {
+    color: var(--pink);
+}
+
+.services-intro p {
+    color: #CCCCCC;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+/* SERVICES PAGE MAIN SECTION */
+
+.services-section {
+    padding: 60px 8%;
+    text-align: center;
+    background-color: var(--light-grey);
+}
+
+.services-section > h2 {
+    font-size: 29px;
+    color: var(--yellow);
+    margin-bottom: 40px;
+}
+
+.services-section > h2 span {
+    color: var(--pink);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* SERVICES PAGE CARDS */
+
+.services-container .service-card {
+    background-color: #1C1C1C;
+    padding: 30px;
+    border: 1px solid #383838;
+    border-radius: 10px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.services-container .service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--yellow);
+    box-shadow: 0 5px 20px rgba(255,204,0,0.15);
+}
+
+.service-icon {
+    width: 55px;
+    height: 55px;
+    background-color: var(--yellow);
+    color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.services-container .service-card h3 {
+    color: var(--pink);
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.services-container .service-card p {
+    color: #CCCCCC;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.services-container .service-card ul {
+    padding-left: 20px;
+    color: #EEEEEE;
+}
+
+.services-container .service-card ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+
+/* WHY CHOOSE US */
+
+.why-us {
+    background-color: #202020;
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.why-us h2 {
+    color: var(--yellow);
+    font-size: 29px;
+    margin-bottom: 40px;
+}
+
+.why-us h2 span {
+    color: var(--pink);
+}
+
+.reasons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.reason {
+    padding: 25px;
+    background-color: #151515;
+    border-radius: 8px;
+    border-bottom: 3px solid var(--pink);
+}
+
+.reason h3 {
+    color: var(--yellow);
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.reason p {
+    color: #CCCCCC;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* SERVICES CALL TO ACTION */
+
+.service-cta {
+    text-align: center;
+    padding: 60px 10%;
+    background: linear-gradient(135deg, #111111, #292929);
+}
+
+.service-cta h2 {
+    color: var(--yellow);
+    font-size: 29px;
+    margin-bottom: 15px;
+}
+
+.service-cta p {
+    color: #CCCCCC;
+    font-size: 15px;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.service-cta a {
+    display: inline-block;
+    padding: 13px 30px;
+    background-color: var(--pink);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.service-cta a:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+
+/* =====================================================
+   13. PORTFOLIO PAGE
+===================================================== */
+
+.projects {
+    padding: 45px 5% 75px;
+    background-color: var(--light-grey);
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 25px;
+}
+
+.project-card {
+    background-color: var(--white);
+    border: 2px solid #E0E4E8;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.project-image {
+    height: 145px;
+    background-color: #191B1E;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image span {
+    width: 100%;
+    height: 105px;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.pink-image span {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+.yellow-image span {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.black-image span {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.project-details {
+    padding: 22px 18px;
+    min-height: 130px;
+}
+
+.project-details h4 {
+    color: var(--pink);
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.project-details h3 {
+    color: #18202B;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.project-details p {
+    color: var(--text-grey);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   14. CONTACT PAGE
+===================================================== */
+
+.contact-section {
+    width: 100%;
+    padding: 40px 4.5%;
+
+    display: grid;
+    grid-template-columns: 430px 1fr;
+    gap: 35px;
+
+    align-items: stretch;
+}
+
+
+/* CONTACT FORM */
+
+.contact-form {
+    background-color: #F7F8FA;
+    padding: 30px;
+    border-radius: 12px;
+    min-height: 510px;
+}
+
+.contact-form h3 {
+    color: var(--pink);
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+}
+
+.contact-form label {
+    display: block;
+    color: #18202B;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background-color: var(--white);
+    border: 2px solid #C9D0D8;
+    border-radius: 5px;
+    padding: 10px 12px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.contact-form input {
+    height: 40px;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--pink);
+}
+
+.contact-form button {
+    background-color: var(--pink);
+    color: var(--white);
+    border: none;
+    border-radius: 25px;
+    padding: 13px 25px;
+
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #D91665;
+    transform: translateY(-2px);
+}
+
+
+/* CONTACT INFORMATION */
+
+.contact-information {
+    background-color: #1B1E21;
+    border: 2px solid #41464A;
+    border-radius: 12px;
+    padding: 30px 35px;
+    min-height: 510px;
+}
+
+.contact-information > h3 {
+    color: var(--yellow);
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.info-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.info-icon.pink {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+.info-icon.yellow {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.info-text h4 {
+    color: #C9CDD1;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.info-text p {
+    color: var(--white);
+    font-size: 14px;
+}
+
+.contact-note {
+    width: 100%;
+    background-color: #292D31;
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+}
+
+.contact-note p {
+    color: var(--yellow);
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   15. COMMON CALL TO ACTION
+===================================================== */
+
+.cta-section {
+    width: 100%;
+    background-color: var(--light-grey);
+    padding: 45px 20px 55px;
+    text-align: center;
+}
+
+.cta-section h4 {
+    color: var(--pink);
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.cta-section h2 {
+    color: #18202B;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.cta-section p {
+    color: var(--text-grey);
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--yellow);
+    color: var(--black);
+    padding: 14px 28px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+
+/* =====================================================
+   16. COMMON FOOTER
+===================================================== */
+
+footer,
+.footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 24px 4% 10px;
+}
+
+.footer-content {
+    border-top: 1px solid #55585A;
+    padding: 24px 5px 30px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 0.9fr 0.7fr;
+    gap: 25px;
+}
+
+
+/* FOOTER BRAND */
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    color: var(--yellow);
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.footer-brand h1 {
+    color: var(--yellow);
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.footer-brand h3 {
+    color: var(--white);
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.footer-brand p {
+    color: #C7CBD0;
+    font-size: 12px;
+}
+
+
+/* FOOTER SOCIAL AND CONTACT */
+
+.footer-social h4,
+.footer-contact h4 {
+    color: var(--yellow);
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.footer-social p,
+.footer-contact p {
+    color: var(--white);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+
+/* FOOTER LINKS */
+
+.footer a,
+footer a,
+.social-links a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer a:hover,
+footer a:hover,
+.social-links a:hover {
+    color: var(--pink);
+}
+
+.social-links {
+    margin: 18px 0;
+}
+
+.social-links a {
+    color: var(--yellow);
+    margin: 0 10px;
+    font-size: 13px;
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+    border-top: 1px solid #55585A;
+    text-align: center;
+    padding: 17px 0 5px;
+}
+
+.copyright p {
+    color: #C7CBD0;
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   17. RESPONSIVE DESIGN - TABLETS
+===================================================== */
+
+@media screen and (max-width: 950px) {
+
+    header,
+    .header {
+        flex-direction: column;
+        gap: 22px;
+        padding: 20px;
+    }
+
+    nav,
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .client-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .difference-section {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+
+    .contact-information {
+        padding: 25px 20px;
+    }
+
+    .info-item {
+        gap: 12px;
+    }
+
+    .info-text p {
+        font-size: 13px;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .value-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .value-card {
+        width: 45%;
+    }
+}
+
+
+/* =====================================================
+   18. RESPONSIVE DESIGN - MOBILE PHONES
+===================================================== */
+
+@media screen and (max-width: 650px) {
+
+    header,
+    .header {
+        min-height: auto;
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 15px;
+    }
+
+    .logo-circle {
+        width: 62px;
+        height: 62px;
+    }
+
+    .logo-text h2 {
+        font-size: 22px;
+    }
+
+    .logo-text p {
+        font-size: 14px;
+    }
+
+    nav,
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    nav a,
+    .navbar a {
+        font-size: 12px;
+    }
+
+
+    /* HERO SECTIONS */
+
+    .hero,
+    .about-hero,
+    .portfolio-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px 6%;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 27px;
+    }
+
+    .hero-content h2 {
+        font-size: 27px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .hero-content p br,
+    .difference-content p br {
+        display: none;
+    }
+
+
+    /* HOME PAGE */
+
+    .hero-image {
+        width: 280px;
+        max-width: 100%;
+        height: 280px;
+        align-self: center;
+    }
+
+    .design-box {
+        transform: scale(0.9);
+    }
+
+    .services {
+        padding: 40px 20px;
+    }
+
+    .service-container {
+        flex-direction: column;
+    }
+
+    .service-container .service-card {
+        width: 100%;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 25px;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content h2 {
+        font-size: 26px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+
+    /* ABOUT PAGE */
+
+    .mission-vision {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 25px;
+    }
+
+    .mission,
+    .vision {
+        width: 100%;
+    }
+
+    .vertical-line {
+        width: 100%;
+        height: 1px;
+        margin: 0;
+    }
+
+    .value-card {
+        width: 100%;
+    }
+
+
+    /* CLIENT PAGE */
+
+    .client-container {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-container {
+        grid-template-columns: 1fr;
+    }
+
+    .partnership-card {
+        width: 100%;
+        max-width: 270px;
+    }
+
+
+    /* SERVICES PAGE */
+
+    .services-intro {
+        padding: 45px 8%;
+    }
+
+    .services-intro h1 {
+        font-size: 29px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services-section {
+        padding: 45px 6%;
+    }
+
+    .reasons-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* PORTFOLIO PAGE */
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        padding: 35px 20px;
+    }
+
+
+    /* CONTACT PAGE */
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        padding: 25px 5%;
+    }
+
+    .contact-form,
+    .contact-information {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .info-item {
+        margin-bottom: 28px;
+    }
+
+
+    /* CALL TO ACTION */
+
+    .cta-section h2 {
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+    .cta-section p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+
+    /* FOOTER */
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    footer,
+    .footer {
+        padding: 25px;
+    }
+
+    .footer-brand h1 {
+        font-size: 27px;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+}
